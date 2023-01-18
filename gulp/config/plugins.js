@@ -3,6 +3,7 @@ import plumber from 'gulp-plumber'; // mistake event
 import notify from 'gulp-notify'; // message
 import sync from 'browser-sync'; // localServer;
 import newer from 'gulp-newer'; // Is it new file?
+import rename from 'gulp-rename'; // rename files
 
 
 export const plugins = {
@@ -11,5 +12,6 @@ export const plugins = {
     notify: notify,
     sync: sync,
     newer: newer,
+    rename: rename,
 }
 

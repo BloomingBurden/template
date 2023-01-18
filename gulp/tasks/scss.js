@@ -1,6 +1,5 @@
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import rename from 'gulp-rename';
 
 import cleanCss from 'gulp-clean-css';
 import webpcss from 'gulp-webpcss';
@@ -27,12 +26,12 @@ export function scss() {
         }))
         .pipe(autoprefixer({
             grid: true,
-            overrideBrowserslist: ["last 3 versions"],
+            overrideBrowserslist: ["last 5 versions"],
             cascade: true,
         }))
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(cleanCss())
-        .pipe(rename({
+        .pipe(app.plugins.rename({
             extname: ".min.css"
         }))
         .pipe(app.gulp.dest(app.path.build.css))
