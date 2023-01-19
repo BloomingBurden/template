@@ -19,6 +19,7 @@ import { server } from './gulp/tasks/server.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
+import { fonts } from './gulp/tasks/fonts.js';
 
 // Watcher for changing files.
 const watcher = () => {
@@ -31,7 +32,7 @@ const watcher = () => {
 
 export { svgSprite } from './gulp/tasks/svgsprite.js';
 
-const mainTasks = gulp.parallel(copy, html, scss, js, images)
+const mainTasks = gulp.parallel(copy, html, scss, js, images, fonts)
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
