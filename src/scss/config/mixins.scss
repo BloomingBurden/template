@@ -1,21 +1,21 @@
-@mixin adaptive($prop, $startMean, $endMean) {
+@mixin adaptive($prop, $startMean, $endMean, $minWidth) {
   @if $prop == 'margin-right' {
-    margin-right: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    margin-right: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - 320)))
   } @else if $prop == 'margin-left' {
-    margin-left: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    margin-left: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } @else if $prop == 'margin-top' {
-    margin-top: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    margin-top: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } @else if $prop == 'margin-bottom' {
-    margin-bottom: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    margin-bottom: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } 
 
   @if $prop == 'padding-right' {
-    padding-right: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    padding-right: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } @else if $prop == 'padding-left' {
-    padding-left: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    padding-left: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } @else if $prop == 'padding-top' {
-    padding-left: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    padding-top: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } @else if $prop == 'padding-bottom' {
-    padding-left: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$mobileW}) / (#{$viewportD} - 320)))
+    padding-bottom: calc(#{$startMean + px} + (#{$endMean - $startMean}) * ((100vw - #{$minWidth + px}) / (#{$viewportD} - #{$minWidth})))
   } 
 }
