@@ -1,4 +1,4 @@
-export function isWebp() {
+const isWebp = () => {
     function testWebP(callback) {
         let webP = new Image();
         webP.onload = webP.onerror = function () {
@@ -11,4 +11,6 @@ export function isWebp() {
         let className = support ? 'webp' : 'no-webp';
         document.documentElement.classList.add(className);
     });
-}
+};
+
+isWebp();
