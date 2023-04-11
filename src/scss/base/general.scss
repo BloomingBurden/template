@@ -17,13 +17,19 @@ textarea {
   outline: none;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   height: 100%;
   font-family: $userfont;
 	font-size: $fontsize;
 	line-height: $lineheight;
 	color: $textcolor;
-	min-width: 320px;
+  font-weight: $fontweight;
+	min-width: $mobileW;
 	position: relative;
 	overflow-x: hidden;
   word-break: break-word;
@@ -39,6 +45,19 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none; 
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
 }
 
 .visually-hidden {
