@@ -85,7 +85,7 @@ button {
 }
 
 [class*="__container"] {
-  max-width: $desktopW;
+  max-width: calc($desktopW + $pad);
   padding: 0 $pad;
   margin: 0 auto;
 };
