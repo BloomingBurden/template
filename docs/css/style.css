@@ -451,7 +451,6 @@ body {
 }
 
 body {
-  height: 100%;
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 16px;
   line-height: 1.65;
@@ -480,11 +479,21 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 button {
+  cursor: pointer;
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
+  background-color: transparent;
 }
 
 .visually-hidden {
@@ -504,13 +513,6 @@ button {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .main {
@@ -520,7 +522,68 @@ button {
 }
 
 [class*=__container] {
-  max-width: 1440px;
-  padding: 0 20px;
+  max-width: 1470px;
+  padding: 0 15px;
   margin: 0 auto;
+}
+
+.no-scrolling {
+  overflow: hidden !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.f-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.f-ac {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.f-jsb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.img-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

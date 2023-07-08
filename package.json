@@ -22,6 +22,7 @@
     "gulp-notify": "latest",
     "gulp-plumber": "latest",
     "gulp-pretty-html": "latest",
+    "gulp-pug": "latest",
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
@@ -34,5 +35,9 @@
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
-  }
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 versions"
+  ]
 }

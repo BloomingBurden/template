@@ -6,7 +6,7 @@ export function images() {
         .pipe(app.plugins.newer(app.path.build.images))
         .pipe(imagemin([
             imageminWebp({
-                quality: 70
+                quality: 80
             })
         ]))
         .pipe(app.plugins.rename({ extname: '.webp' }))

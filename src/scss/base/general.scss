@@ -24,7 +24,6 @@ body {
 }
 
 body {
-  height: 100%;
   font-family: $userfont;
 	font-size: $fontsize;
 	line-height: $lineheight;
@@ -53,11 +52,21 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 button {
+  cursor: pointer;
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
+  background-color: transparent;
 }
 
 .visually-hidden {
@@ -76,8 +85,6 @@ button {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
 
 .main {
@@ -85,7 +92,52 @@ button {
 }
 
 [class*="__container"] {
-  max-width: calc($desktopW + $pad);
+  max-width: calc($desktopW + $pad + $pad);
   padding: 0 $pad;
   margin: 0 auto;
 };
+
+.no-scrolling {
+  overflow: hidden!important;
+}
+
+.d-none {
+  display: none!important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-c {
+  align-items: center;
+  justify-content: center;
+}
+
+.f-ac {
+  align-items: center;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.f-jsb {
+  justify-content: space-between;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.img-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
